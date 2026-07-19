@@ -177,7 +177,6 @@ function fmtDate(d){
   return `${day}/${m}/${y}`;
 }
 function todayISO(){ return new Date().toISOString().slice(0,10); }
-function computeStatut(montant){ return Number(montant) > 0 ? 'Payée' : 'Non payée'; }
 const DATE_DEBUT_BASE = '2025-01-01';
 const NUMERO_PREFIX = 'C00000000000';
 function normalizeNumero(raw){
@@ -443,7 +442,7 @@ document.getElementById('formInfraction').addEventListener('submit', async funct
     document.getElementById('f_dateinf').value = isoToFr(todayISO());
     populateCatalogueSelects();
     refreshAll();
-    showToast(`Amende enregistrée (${computeStatut(montant)}).`);
+    showToast('Amende enregistrée (Non payée).');
   } catch(err){
     showToast(err.message);
   }
@@ -531,6 +530,9 @@ function renderHistory(){
       <td class="col-center dateverb-cell"><span class="dv-value">${fmtDate(i.dateVerbalisation)}</span></td>
       <td class="col-center"><span class="badge ${i.statut==='Payée'?'payee':'nonpayee'}">${i.statut}</span></td>
       <td class="actions-cell colActions">
+        ${i.statut==='Payée'
+          ? `<button class="btn btn-sm btn-outline" data-unpay="${i.id}">Marquer non payée</button>`
+          : `<button class="btn btn-sm btn-success" data-pay="${i.id}">Marquer payée</button>`}
         <button class="btn btn-sm btn-outline" data-edit="${i.id}">Modifier</button>
         ${canDelete ? `<button class="btn btn-sm btn-danger" data-delete="${i.id}">Supprimer</button>` : ''}
       </td>
@@ -568,7 +570,23 @@ function renderHistory(){
       await loadCompanyData(currentCompany);
       editingId = null;
       refreshAll();
-      showToast(`Amende mise à jour (${computeStatut(montant)}).`);
+      showToast('Amende mise à jour.');
+    } catch(err){ showToast(err.message); }
+  }));
+  body.querySelectorAll('[data-pay]').forEach(b=>b.addEventListener('click', async ()=>{
+    try {
+      await api(`/companies/${currentCompany}/infractions/${b.dataset.pay}/statut`, { method:'POST', body: JSON.stringify({ statut: 'Payée' }) });
+      await loadCompanyData(currentCompany);
+      refreshAll();
+      showToast('Amende marquée comme payée.');
+    } catch(err){ showToast(err.message); }
+  }));
+  body.querySelectorAll('[data-unpay]').forEach(b=>b.addEventListener('click', async ()=>{
+    try {
+      await api(`/companies/${currentCompany}/infractions/${b.dataset.unpay}/statut`, { method:'POST', body: JSON.stringify({ statut: 'Non payée' }) });
+      await loadCompanyData(currentCompany);
+      refreshAll();
+      showToast('Amende marquée comme non payée.');
     } catch(err){ showToast(err.message); }
   }));
   body.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click', async ()=>{
