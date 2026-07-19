@@ -1,0 +1,1523 @@
+{
+  "catalogue": [
+    {
+      "code": "028",
+      "libelle": "Utilisation du téléphone au volant",
+      "montant": 10000
+    },
+    {
+      "code": "029",
+      "libelle": "Non port de la ceinture de sécurité",
+      "montant": 2000
+    },
+    {
+      "code": "035",
+      "libelle": "Chargement hors gabarit",
+      "montant": 5000
+    },
+    {
+      "code": "043",
+      "libelle": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000
+    },
+    {
+      "code": "044",
+      "libelle": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000
+    },
+    {
+      "code": "045",
+      "libelle": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000
+    },
+    {
+      "code": "046",
+      "libelle": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 10000
+    }
+  ],
+  "vehiculesTB": [
+    {
+      "plaque": "1248EA01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "1380EE01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "1585FT01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "2277LT01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "2861FL07",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "2862FL07",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "3282JZ01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "3475EA01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "4223CV01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "4511EZ01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "4953KK01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "4956KK01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "5374FL01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "5858GU01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "6118EX01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "6614EV01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "7108LS04",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "7973FY01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "7975FY01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "8553EP01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "892JH01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "8943GP01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "8948GB01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "9670FX01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    }
+  ],
+  "infractionsTB": [
+    {
+      "id": "4679882e",
+      "plaque": "1248EA01",
+      "numero": "C145809618",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2026-02-26",
+      "dateVerbalisation": "2026-02-27",
+      "statut": "Payée"
+    },
+    {
+      "id": "99e17cba",
+      "plaque": "1380EE01",
+      "numero": "C145714198",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2026-02-14",
+      "dateVerbalisation": "2026-02-25",
+      "statut": "Payée"
+    },
+    {
+      "id": "24597c19",
+      "plaque": "1380EE01",
+      "numero": "C143954305",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-12-12",
+      "dateVerbalisation": "2026-01-07",
+      "statut": "Payée"
+    },
+    {
+      "id": "c591a74c",
+      "plaque": "1380EE01",
+      "numero": "C000002339",
+      "code": "035",
+      "infraction": "Chargement hors gabarit",
+      "montant": 5000,
+      "dateInfraction": "2026-02-16",
+      "dateVerbalisation": "2026-02-16",
+      "statut": "Payée"
+    },
+    {
+      "id": "5827daa3",
+      "plaque": "1380EE01",
+      "numero": "C143989781",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-12-15",
+      "dateVerbalisation": "2026-01-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "82fa653a",
+      "plaque": "1585FT01",
+      "numero": "C138680806",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-06-19",
+      "dateVerbalisation": "2025-08-28",
+      "statut": "Payée"
+    },
+    {
+      "id": "6acb7e08",
+      "plaque": "1585FT01",
+      "numero": "C137877563",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-05-14",
+      "dateVerbalisation": "2025-08-05",
+      "statut": "Payée"
+    },
+    {
+      "id": "73591ca1",
+      "plaque": "1585FT01",
+      "numero": "C137848324",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-05-11",
+      "dateVerbalisation": "2025-08-04",
+      "statut": "Payée"
+    },
+    {
+      "id": "1082d4e3",
+      "plaque": "1585FT01",
+      "numero": "C144707967",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-12-31",
+      "dateVerbalisation": "2026-02-02",
+      "statut": "Payée"
+    },
+    {
+      "id": "03141bd3",
+      "plaque": "1585FT01",
+      "numero": "C135215852",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-16",
+      "dateVerbalisation": "2025-04-28",
+      "statut": "Payée"
+    },
+    {
+      "id": "b7a15a98",
+      "plaque": "2277LT01",
+      "numero": "C146981947",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-06-25",
+      "dateVerbalisation": "2026-06-26",
+      "statut": "Payée"
+    },
+    {
+      "id": "8c6b3100",
+      "plaque": "2861FL07",
+      "numero": "C136157566",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-03-17",
+      "dateVerbalisation": "2025-06-10",
+      "statut": "Payée"
+    },
+    {
+      "id": "ca61a105",
+      "plaque": "2861FL07",
+      "numero": "C130800565",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2024-09-20",
+      "dateVerbalisation": "2024-10-02",
+      "statut": "Payée"
+    },
+    {
+      "id": "561b9056",
+      "plaque": "2862FL07",
+      "numero": "C140021570",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-09-27",
+      "dateVerbalisation": "2025-10-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "97b0cc0b",
+      "plaque": "2862FL07",
+      "numero": "C133819918",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2024-12-31",
+      "dateVerbalisation": "2025-02-19",
+      "statut": "Payée"
+    },
+    {
+      "id": "fe49c116",
+      "plaque": "2862FL07",
+      "numero": "C133829862",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2024-12-31",
+      "dateVerbalisation": "2025-02-20",
+      "statut": "Payée"
+    },
+    {
+      "id": "d77c889a",
+      "plaque": "3282JZ01",
+      "numero": "C144500775",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-12-07",
+      "dateVerbalisation": "2026-01-28",
+      "statut": "Payée"
+    },
+    {
+      "id": "1632364a",
+      "plaque": "3282JZ01",
+      "numero": "C147079643",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-07-02",
+      "dateVerbalisation": "2026-07-02",
+      "statut": "Payée"
+    },
+    {
+      "id": "c95d50fa",
+      "plaque": "3282JZ01",
+      "numero": "C146557297",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 10000,
+      "dateInfraction": "2026-05-21",
+      "dateVerbalisation": "2026-05-22",
+      "statut": "Payée"
+    },
+    {
+      "id": "94f5af00",
+      "plaque": "3282JZ01",
+      "numero": "C147104121",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-07-01",
+      "dateVerbalisation": "2026-07-06",
+      "statut": "Payée"
+    },
+    {
+      "id": "663c44fd",
+      "plaque": "3282JZ01",
+      "numero": "C147116037",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-07-03",
+      "dateVerbalisation": "2026-07-06",
+      "statut": "Payée"
+    },
+    {
+      "id": "1b0af508",
+      "plaque": "3282JZ01",
+      "numero": "C146788789",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-06-04",
+      "dateVerbalisation": "2026-06-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "d04b8341",
+      "plaque": "3475EA01",
+      "numero": "C130877480",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2024-09-22",
+      "dateVerbalisation": "2024-10-07",
+      "statut": "Payée"
+    },
+    {
+      "id": "b2771376",
+      "plaque": "3475EA01",
+      "numero": "C130877091",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2024-09-22",
+      "dateVerbalisation": "2024-10-07",
+      "statut": "Payée"
+    },
+    {
+      "id": "243a84df",
+      "plaque": "4223CV01",
+      "numero": "C133708739",
+      "code": "",
+      "infraction": "Infraction non précisée",
+      "montant": 0,
+      "dateInfraction": "2024-12-28",
+      "dateVerbalisation": "2025-02-17",
+      "statut": "Non payée"
+    },
+    {
+      "id": "e9fdd1ad",
+      "plaque": "4511EZ01",
+      "numero": "C134009803",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-01-09",
+      "dateVerbalisation": "2025-03-04",
+      "statut": "Payée"
+    },
+    {
+      "id": "65a074e2",
+      "plaque": "4511EZ01",
+      "numero": "C134040947",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-01-10",
+      "dateVerbalisation": "2025-03-05",
+      "statut": "Payée"
+    },
+    {
+      "id": "6cffa491",
+      "plaque": "4511EZ01",
+      "numero": "C134985923",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-06",
+      "dateVerbalisation": "2025-04-14",
+      "statut": "Payée"
+    },
+    {
+      "id": "186e1e2d",
+      "plaque": "4953KK01",
+      "numero": "C143102601",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-09-23",
+      "dateVerbalisation": "2025-12-05",
+      "statut": "Payée"
+    },
+    {
+      "id": "95fadc82",
+      "plaque": "4953KK01",
+      "numero": "C143164958",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-09-26",
+      "dateVerbalisation": "2025-12-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "764a4df5",
+      "plaque": "4953KK01",
+      "numero": "C142543642",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-08-28",
+      "dateVerbalisation": "2025-11-14",
+      "statut": "Payée"
+    },
+    {
+      "id": "d18e28ee",
+      "plaque": "4953KK01",
+      "numero": "C142253310",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-08-22",
+      "dateVerbalisation": "2025-11-04",
+      "statut": "Payée"
+    },
+    {
+      "id": "43f65b31",
+      "plaque": "4953KK01",
+      "numero": "C143398433",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-10-10",
+      "dateVerbalisation": "2025-12-17",
+      "statut": "Payée"
+    },
+    {
+      "id": "6bcab9d2",
+      "plaque": "4953KK01",
+      "numero": "C143115608",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-09-23",
+      "dateVerbalisation": "2025-12-05",
+      "statut": "Payée"
+    },
+    {
+      "id": "38e69428",
+      "plaque": "4953KK01",
+      "numero": "C144921996",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 10000,
+      "dateInfraction": "2025-11-26",
+      "dateVerbalisation": "2026-02-11",
+      "statut": "Payée"
+    },
+    {
+      "id": "c79cdb74",
+      "plaque": "4953KK01",
+      "numero": "C146957857",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 10000,
+      "dateInfraction": "2026-06-21",
+      "dateVerbalisation": "2026-06-22",
+      "statut": "Payée"
+    },
+    {
+      "id": "0cc4833e",
+      "plaque": "4956KK01",
+      "numero": "C142067282",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-08-16",
+      "dateVerbalisation": "2025-10-30",
+      "statut": "Payée"
+    },
+    {
+      "id": "5f67491a",
+      "plaque": "4956KK01",
+      "numero": "C140108847",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-08-05",
+      "dateVerbalisation": "2025-10-13",
+      "statut": "Payée"
+    },
+    {
+      "id": "f900b8d2",
+      "plaque": "4956KK01",
+      "numero": "C142264396",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-08-22",
+      "dateVerbalisation": "2025-11-04",
+      "statut": "Payée"
+    },
+    {
+      "id": "9e7980e5",
+      "plaque": "4956KK01",
+      "numero": "C143504669",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-10-13",
+      "dateVerbalisation": "2025-12-22",
+      "statut": "Payée"
+    },
+    {
+      "id": "f1e0f7c0",
+      "plaque": "4956KK01",
+      "numero": "C142936847",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-09-15",
+      "dateVerbalisation": "2025-11-28",
+      "statut": "Payée"
+    },
+    {
+      "id": "20168a35",
+      "plaque": "4956KK01",
+      "numero": "C142963396",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-09-16",
+      "dateVerbalisation": "2025-12-01",
+      "statut": "Payée"
+    },
+    {
+      "id": "56095263",
+      "plaque": "4956KK01",
+      "numero": "C139697363",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-07-31",
+      "dateVerbalisation": "2025-09-30",
+      "statut": "Payée"
+    },
+    {
+      "id": "7102e255",
+      "plaque": "4956KK01",
+      "numero": "C142962095",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-09-16",
+      "dateVerbalisation": "2025-12-01",
+      "statut": "Payée"
+    },
+    {
+      "id": "d40c2a35",
+      "plaque": "4956KK01",
+      "numero": "C141925948",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-08-14",
+      "dateVerbalisation": "2025-10-27",
+      "statut": "Payée"
+    },
+    {
+      "id": "16e153ef",
+      "plaque": "4956KK01",
+      "numero": "C144938747",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-12-16",
+      "dateVerbalisation": "2026-02-11",
+      "statut": "Payée"
+    },
+    {
+      "id": "f1b17a77",
+      "plaque": "4956KK01",
+      "numero": "C142125081",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-08-16",
+      "dateVerbalisation": "2025-10-31",
+      "statut": "Payée"
+    },
+    {
+      "id": "f59000db",
+      "plaque": "4956KK01",
+      "numero": "C141931519",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-08-14",
+      "dateVerbalisation": "2025-10-27",
+      "statut": "Payée"
+    },
+    {
+      "id": "6ae261bd",
+      "plaque": "4956KK01",
+      "numero": "C146302344",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-04-29",
+      "dateVerbalisation": "2026-05-05",
+      "statut": "Payée"
+    },
+    {
+      "id": "95e156cd",
+      "plaque": "5374FL01",
+      "numero": "C136651277",
+      "code": "028",
+      "infraction": "Utilisation du téléphone au volant",
+      "montant": 10000,
+      "dateInfraction": "2025-06-23",
+      "dateVerbalisation": "2025-06-26",
+      "statut": "Payée"
+    },
+    {
+      "id": "9e81cb0b",
+      "plaque": "5374FL01",
+      "numero": "C145829350",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2026-02-28",
+      "dateVerbalisation": "2026-03-02",
+      "statut": "Payée"
+    },
+    {
+      "id": "de8bb0ab",
+      "plaque": "5858GU01",
+      "numero": "C132844569",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2024-11-29",
+      "dateVerbalisation": "2025-01-10",
+      "statut": "Payée"
+    },
+    {
+      "id": "42a70af5",
+      "plaque": "5858GU01",
+      "numero": "C133961924",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-01-06",
+      "dateVerbalisation": "2025-02-28",
+      "statut": "Payée"
+    },
+    {
+      "id": "0bbce4ea",
+      "plaque": "6118EX01",
+      "numero": "C134184411",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-01-15",
+      "dateVerbalisation": "2025-03-13",
+      "statut": "Payée"
+    },
+    {
+      "id": "a79cb448",
+      "plaque": "6118EX01",
+      "numero": "C134291906",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-01-19",
+      "dateVerbalisation": "2025-03-19",
+      "statut": "Payée"
+    },
+    {
+      "id": "d83f0ef7",
+      "plaque": "6118EX01",
+      "numero": "C134737869",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-01-29",
+      "dateVerbalisation": "2025-04-03",
+      "statut": "Payée"
+    },
+    {
+      "id": "0d22bcc8",
+      "plaque": "6614EV01",
+      "numero": "C137395536",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-06-04",
+      "dateVerbalisation": "2025-07-16",
+      "statut": "Payée"
+    },
+    {
+      "id": "f85f0ace",
+      "plaque": "6614EV01",
+      "numero": "C143360781",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-10-08",
+      "dateVerbalisation": "2025-12-16",
+      "statut": "Payée"
+    },
+    {
+      "id": "3967ff52",
+      "plaque": "6614EV01",
+      "numero": "C145020250",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-01-31",
+      "dateVerbalisation": "2026-02-13",
+      "statut": "Payée"
+    },
+    {
+      "id": "717d48bc",
+      "plaque": "7108LS04",
+      "numero": "C131781392",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2024-10-24",
+      "dateVerbalisation": "2024-11-20",
+      "statut": "Payée"
+    },
+    {
+      "id": "64b2639b",
+      "plaque": "7108LS04",
+      "numero": "C136643278",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-04-24",
+      "dateVerbalisation": "2025-06-26",
+      "statut": "Payée"
+    },
+    {
+      "id": "a0aaf493",
+      "plaque": "7108LS04",
+      "numero": "C135581062",
+      "code": "044",
+      "infraction": "Excès de vitesse (5 à 10 km/h au-dessus de la limite)",
+      "montant": 3000,
+      "dateInfraction": "2025-03-06",
+      "dateVerbalisation": "2025-05-13",
+      "statut": "Payée"
+    },
+    {
+      "id": "a8ccce4a",
+      "plaque": "7973FY01",
+      "numero": "C135142940",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-11",
+      "dateVerbalisation": "2025-04-22",
+      "statut": "Payée"
+    },
+    {
+      "id": "27440b00",
+      "plaque": "7975FY01",
+      "numero": "C139361987",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-07-25",
+      "dateVerbalisation": "2025-09-19",
+      "statut": "Payée"
+    },
+    {
+      "id": "eb287258",
+      "plaque": "8553EP01",
+      "numero": "C145506709",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2026-01-24",
+      "dateVerbalisation": "2026-02-19",
+      "statut": "Payée"
+    },
+    {
+      "id": "59fdb486",
+      "plaque": "8553EP01",
+      "numero": "C145505705",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2026-01-23",
+      "dateVerbalisation": "2026-02-19",
+      "statut": "Payée"
+    },
+    {
+      "id": "f8bd62b5",
+      "plaque": "892JH01",
+      "numero": "C144739347",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-12-21",
+      "dateVerbalisation": "2026-02-03",
+      "statut": "Payée"
+    },
+    {
+      "id": "5e8300c0",
+      "plaque": "8943GP01",
+      "numero": "C134994218",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-02-07",
+      "dateVerbalisation": "2025-04-14",
+      "statut": "Payée"
+    },
+    {
+      "id": "45af4ae7",
+      "plaque": "8943GP01",
+      "numero": "C143681232",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-11-17",
+      "dateVerbalisation": "2025-12-29",
+      "statut": "Payée"
+    },
+    {
+      "id": "a04d16c2",
+      "plaque": "8943GP01",
+      "numero": "C143681495",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-11-17",
+      "dateVerbalisation": "2025-12-29",
+      "statut": "Payée"
+    },
+    {
+      "id": "0f528333",
+      "plaque": "8943GP01",
+      "numero": "C143681648",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-11-17",
+      "dateVerbalisation": "2025-12-29",
+      "statut": "Payée"
+    },
+    {
+      "id": "bf0c375d",
+      "plaque": "8943GP01",
+      "numero": "C134983255",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-06",
+      "dateVerbalisation": "2025-04-14",
+      "statut": "Payée"
+    },
+    {
+      "id": "8ab8e12c",
+      "plaque": "8943GP01",
+      "numero": "C136003578",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-03-12",
+      "dateVerbalisation": "2025-06-02",
+      "statut": "Payée"
+    },
+    {
+      "id": "3845d66f",
+      "plaque": "8948GB01",
+      "numero": "C138098818",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-05-31",
+      "dateVerbalisation": "2025-08-14",
+      "statut": "Payée"
+    },
+    {
+      "id": "2225b032",
+      "plaque": "8948GB01",
+      "numero": "C138136710",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2025-06-03",
+      "dateVerbalisation": "2025-08-18",
+      "statut": "Payée"
+    },
+    {
+      "id": "77567c92",
+      "plaque": "9670FX01",
+      "numero": "C135314803",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-23",
+      "dateVerbalisation": "2025-05-05",
+      "statut": "Payée"
+    },
+    {
+      "id": "d98e6446",
+      "plaque": "9670FX01",
+      "numero": "C134966405",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-04",
+      "dateVerbalisation": "2025-04-11",
+      "statut": "Payée"
+    },
+    {
+      "id": "ae1ec852",
+      "plaque": "9670FX01",
+      "numero": "C135690803",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-28",
+      "dateVerbalisation": "2025-05-19",
+      "statut": "Payée"
+    },
+    {
+      "id": "c68a4391",
+      "plaque": "9670FX01",
+      "numero": "C135238728",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-19",
+      "dateVerbalisation": "2025-04-29",
+      "statut": "Payée"
+    },
+    {
+      "id": "8191a3c5",
+      "plaque": "9670FX01",
+      "numero": "C135383373",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-24",
+      "dateVerbalisation": "2025-05-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "d547a01e",
+      "plaque": "9670FX01",
+      "numero": "C135383122",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-24",
+      "dateVerbalisation": "2025-05-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "10a4997f",
+      "plaque": "9670FX01",
+      "numero": "C135382107",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-24",
+      "dateVerbalisation": "2025-05-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "3153006a",
+      "plaque": "9670FX01",
+      "numero": "C135382097",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-24",
+      "dateVerbalisation": "2025-05-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "d76a6d77",
+      "plaque": "9670FX01",
+      "numero": "C135384420",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-24",
+      "dateVerbalisation": "2025-05-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "d56b157b",
+      "plaque": "9670FX01",
+      "numero": "C135383386",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-24",
+      "dateVerbalisation": "2025-05-08",
+      "statut": "Payée"
+    },
+    {
+      "id": "e2c559ab",
+      "plaque": "9670FX01",
+      "numero": "C135241649",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-19",
+      "dateVerbalisation": "2025-04-29",
+      "statut": "Payée"
+    },
+    {
+      "id": "101a65c1",
+      "plaque": "9670FX01",
+      "numero": "C135240096",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-19",
+      "dateVerbalisation": "2025-04-29",
+      "statut": "Payée"
+    },
+    {
+      "id": "953bebdd",
+      "plaque": "9670FX01",
+      "numero": "C135325941",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-23",
+      "dateVerbalisation": "2025-05-06",
+      "statut": "Payée"
+    },
+    {
+      "id": "0f116039",
+      "plaque": "9670FX01",
+      "numero": "C135238757",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-19",
+      "dateVerbalisation": "2025-04-29",
+      "statut": "Payée"
+    },
+    {
+      "id": "d50a383b",
+      "plaque": "9670FX01",
+      "numero": "C134981498",
+      "code": "029",
+      "infraction": "Non port de la ceinture de sécurité",
+      "montant": 2000,
+      "dateInfraction": "2025-02-05",
+      "dateVerbalisation": "2025-04-14",
+      "statut": "Payée"
+    }
+  ],
+  "vehiculesKESHO": [
+    {
+      "plaque": "2005KF01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "2006KF01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    },
+    {
+      "plaque": "643KF01",
+      "marque": "",
+      "modele": "",
+      "conducteur": "",
+      "statut": "Actif"
+    }
+  ],
+  "infractionsKESHO": [
+    {
+      "id": "c6394909",
+      "plaque": "2005KF01",
+      "numero": "C143888732",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-10-30",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "c2ed95de",
+      "plaque": "2005KF01",
+      "numero": "C143878942",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-10-30",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "f3674bd7",
+      "plaque": "2006KF01",
+      "numero": "C145935063",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2026-03-08",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "7f4de95c",
+      "plaque": "2006KF01",
+      "numero": "C145896666",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2026-03-05",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "176d8244",
+      "plaque": "2006KF01",
+      "numero": "C145895772",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2026-03-05",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "c2cf8426",
+      "plaque": "2006KF01",
+      "numero": "C145896695",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2026-03-05",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "209f872d",
+      "plaque": "2006KF01",
+      "numero": "C145898995",
+      "code": "043",
+      "infraction": "Excès de vitesse (1 à 5 km/h au-dessus de la limite)",
+      "montant": 2000,
+      "dateInfraction": "2026-03-05",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "dcc574e9",
+      "plaque": "2006KF01",
+      "numero": "C145988946",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 10000,
+      "dateInfraction": "2026-03-15",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "1e790ef1",
+      "plaque": "2006KF01",
+      "numero": "C146742799",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 10000,
+      "dateInfraction": "2026-05-31",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "051a85c1",
+      "plaque": "643KF01",
+      "numero": "C146042851",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-03-26",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "f790a1f3",
+      "plaque": "643KF01",
+      "numero": "C145129824",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-02-14",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "41c8757c",
+      "plaque": "643KF01",
+      "numero": "C145142532",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-02-15",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "49457085",
+      "plaque": "643KF01",
+      "numero": "C144882556",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-01-17",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "81ff450d",
+      "plaque": "643KF01",
+      "numero": "C145142476",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-02-15",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "1b97865e",
+      "plaque": "643KF01",
+      "numero": "C144459329",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-11-30",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "7c89dd0d",
+      "plaque": "643KF01",
+      "numero": "C144461114",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-11-30",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "a1c57b14",
+      "plaque": "643KF01",
+      "numero": "C144443299",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-11-28",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "b2c80692",
+      "plaque": "643KF01",
+      "numero": "C144562552",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-12-22",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "0663a450",
+      "plaque": "643KF01",
+      "numero": "C144532965",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-12-18",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "c8d772c3",
+      "plaque": "643KF01",
+      "numero": "C144460927",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-11-30",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "f0566d0b",
+      "plaque": "643KF01",
+      "numero": "C144597004",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2025-12-27",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "d6762a11",
+      "plaque": "643KF01",
+      "numero": "C145649229",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-02-19",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "36b89ee9",
+      "plaque": "643KF01",
+      "numero": "C145894620",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-03-05",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "012f2f27",
+      "plaque": "643KF01",
+      "numero": "C146978381",
+      "code": "045",
+      "infraction": "Excès de vitesse (10 à 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-06-21",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "95be9e29",
+      "plaque": "643KF01",
+      "numero": "C144909860",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 5000,
+      "dateInfraction": "2026-02-05",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "e74054a3",
+      "plaque": "643KF01",
+      "numero": "C144456233",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 10000,
+      "dateInfraction": "2025-11-30",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    },
+    {
+      "id": "ffc7e59d",
+      "plaque": "643KF01",
+      "numero": "C146826133",
+      "code": "046",
+      "infraction": "Excès de vitesse (au-delà de 20 km/h au-dessus de la limite)",
+      "montant": 10000,
+      "dateInfraction": "2026-06-07",
+      "dateVerbalisation": "",
+      "statut": "Payée"
+    }
+  ]
+}
