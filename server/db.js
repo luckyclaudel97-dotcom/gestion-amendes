@@ -148,7 +148,16 @@ function deleteVehicule(c, plaque) {
 }
 
 /* --------------------------- INFRACTIONS ---------------------------- */
-function computeStatut(montant) { return Number(montant) > 0 ? 'Payée' : 'Non payée'; }
+/*
+ * Le statut de paiement n'est JAMAIS deduit automatiquement du montant.
+ * Le logiciel sert d'abord a repertorier des amendes qui ne sont pas payees :
+ * toute nouvelle amende est donc enregistree "Non payee", quel que soit le
+ * montant saisi. Le passage a "Payee" est une action explicite de
+ * l'utilisateur (voir markInfractionStatut / route dediee).
+ */
+function normalizeStatut(v) {
+  return v === 'Payée' ? 'Payée' : 'Non payée';
+}
 
 function listInfractions(c) { return company(c).infractions; }
 function addInfraction(c, data) {
@@ -163,7 +172,8 @@ function addInfraction(c, data) {
     montant,
     dateInfraction: data.dateInfraction,
     dateVerbalisation: data.dateVerbalisation || '',
-    statut: computeStatut(montant)
+    datePaiement: '',
+    statut: 'Non payée'
   };
   comp.infractions.unshift(record);
   persist();
@@ -177,10 +187,18 @@ function updateInfraction(c, id, data) {
   if (data.infraction !== undefined && data.infraction) rec.infraction = data.infraction;
   if (data.montant !== undefined) {
     rec.montant = Number(data.montant) || 0;
-    rec.statut = computeStatut(rec.montant);
   }
   if (data.dateInfraction !== undefined) rec.dateInfraction = data.dateInfraction;
   if (data.dateVerbalisation !== undefined) rec.dateVerbalisation = data.dateVerbalisation;
+  persist();
+  return rec;
+}
+function markInfractionStatut(c, id, statut) {
+  const comp = company(c);
+  const rec = comp.infractions.find(i => i.id === id);
+  if (!rec) return null;
+  rec.statut = normalizeStatut(statut);
+  rec.datePaiement = rec.statut === 'Payée' ? (new Date().toISOString().slice(0, 10)) : '';
   persist();
   return rec;
 }
@@ -236,7 +254,7 @@ module.exports = {
   isValidCompany,
   getUsers, findUserByUsername, findUserById, addUser, updateUser, deleteUser, countAdmins,
   listVehicules, addVehicule, deleteVehicule,
-  listInfractions, addInfraction, updateInfraction, deleteInfraction,
+  listInfractions, addInfraction, updateInfraction, deleteInfraction, markInfractionStatut,
   listCatalogue, addCatalogueItem, deleteCatalogueItem,
   resetCompany, importCompany
 };
