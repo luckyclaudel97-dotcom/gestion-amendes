@@ -1,0 +1,1008 @@
+<style>
+  :root{
+    /* Palette "Anthracite & Émeraude" — chic, sobre, professionnelle */
+    --brown-dark:#161B1F;
+    --brown:#232B32;
+    --brown-mid:#3A454E;
+    --brown-light:#8A97A0;
+    --cream:#F4F6F6;
+    --cream-dark:#E4E9E8;
+    --text:#1B2226;
+    --muted:#66727A;
+    --white:#FFFFFF;
+    --success:#0E7C5C;
+    --success-bg:#E2F4EC;
+    --danger:#B3261E;
+    --danger-bg:#FBEAE8;
+    --accent:#10A37F;
+    --accent-dark:#0B6E56;
+    --gold:#C6A15B;
+    --shadow: 0 2px 10px rgba(15,20,23,0.07);
+    --shadow-lg: 0 10px 32px rgba(15,20,23,0.18);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background:var(--cream);
+    color:var(--text);
+  }
+  header.topbar{
+    background:var(--white);
+    border-bottom:3px solid var(--accent);
+    border-top:3px solid var(--brown-dark);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 28px;
+    box-shadow:var(--shadow);
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .brand svg{height:52px;width:auto;display:block;}
+  .brand .titles h1{
+    margin:0;
+    font-size:19px;
+    letter-spacing:.3px;
+    color:var(--brown-dark);
+  }
+  .brand .titles p{
+    margin:2px 0 0;
+    font-size:12.5px;
+    color:var(--muted);
+  }
+  .topbar-right{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:13px;
+    color:var(--muted);
+    flex-wrap:wrap;
+  }
+  .topbar-right .date-badge{
+    background:var(--cream-dark);
+    padding:6px 12px;
+    border-radius:20px;
+    font-weight:600;
+    color:var(--brown-dark);
+    white-space:nowrap;
+  }
+  .company-switch{
+    display:flex;
+    background:var(--cream-dark);
+    border-radius:10px;
+    padding:4px;
+    gap:4px;
+  }
+  .company-switch button{
+    border:none;
+    background:transparent;
+    padding:8px 16px;
+    border-radius:7px;
+    font-weight:700;
+    font-size:13px;
+    color:var(--muted);
+    cursor:pointer;
+    transition:.15s;
+    white-space:nowrap;
+  }
+  .company-switch button:hover{color:var(--brown-dark);}
+  .company-switch button.active{background:var(--brown);color:#fff;}
+  .kesho-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--brown);
+    color:#fff;
+    font-weight:800;
+    font-size:20px;
+    letter-spacing:1px;
+    border-radius:12px;
+    padding:0 18px;
+    height:52px;
+    box-sizing:border-box;
+  }
+  .nav-bar{
+    background:var(--white);
+    padding:12px 24px;
+    border-bottom:1px solid var(--cream-dark);
+    position:sticky;
+    top:0;
+    z-index:20;
+  }
+  .nav-dropdown{ position:relative; display:inline-block; }
+  .nav-trigger{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:var(--cream);
+    border:1.5px solid var(--cream-dark);
+    padding:10px 16px;
+    border-radius:10px;
+    font-size:14.5px;
+    font-weight:700;
+    color:var(--brown-dark);
+    cursor:pointer;
+    transition:.15s;
+    font-family:inherit;
+  }
+  .nav-trigger:hover{ border-color:var(--brown-mid); background:var(--white); box-shadow:var(--shadow); }
+  .nav-trigger-icon{ display:flex; color:var(--brown); }
+  .nav-trigger-icon svg{ width:19px; height:19px; }
+  .nav-trigger .chevron{ width:15px; height:15px; margin-left:2px; color:var(--muted); transition:transform .2s; }
+  .nav-dropdown.open .nav-trigger{ border-color:var(--brown-mid); background:var(--white); box-shadow:var(--shadow); }
+  .nav-dropdown.open .chevron{ transform:rotate(180deg); }
+  .nav-menu{
+    position:absolute;
+    top:calc(100% + 8px);
+    left:0;
+    min-width:250px;
+    background:var(--white);
+    border-radius:12px;
+    box-shadow:var(--shadow-lg);
+    border:1px solid var(--cream-dark);
+    padding:6px;
+    display:none;
+    z-index:30;
+  }
+  .nav-dropdown.open .nav-menu{ display:block; }
+  .nav-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    text-align:left;
+    background:transparent;
+    border:none;
+    padding:11px 12px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--text);
+    cursor:pointer;
+    transition:.12s;
+    font-family:inherit;
+  }
+  .nav-item svg{ width:19px; height:19px; flex-shrink:0; color:var(--brown-mid); }
+  .nav-item:hover{ background:var(--cream); }
+  .nav-item.active{ background:var(--cream-dark); color:var(--brown-dark); }
+  .nav-item.active svg{ color:var(--brown-dark); }
+  .nav-item + .nav-item{ margin-top:2px; }
+  main{
+    max-width:1180px;
+    margin:0 auto;
+    padding:26px 24px 60px;
+  }
+  section.tab-panel{display:none;}
+  section.tab-panel.active{display:block;animation:fadeIn .2s ease;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+
+  h2.section-title{
+    font-size:19px;
+    color:var(--brown-dark);
+    margin:0 0 18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  h2.section-title{ font-weight:700; letter-spacing:.2px; }
+  h2.section-title::before{
+    content:"";
+    width:6px;height:22px;
+    background:linear-gradient(180deg,var(--brown-dark),var(--accent));
+    border-radius:3px;
+    display:inline-block;
+  }
+
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:16px;
+    margin-bottom:22px;
+  }
+  .card{
+    background:var(--white);
+    border-radius:12px;
+    padding:16px 20px;
+    box-shadow:var(--shadow);
+    border-left:4px solid var(--brown);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+  .card .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
+  .card .value{font-size:24px;font-weight:700;color:var(--brown-dark);margin-top:6px;}
+  .card.alt{border-left-color:var(--success);}
+  .card.alt2{border-left-color:var(--danger);}
+
+  .panel-box{
+    background:var(--white);
+    border-radius:14px;
+    box-shadow:var(--shadow);
+    padding:22px;
+    margin-bottom:24px;
+  }
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  @media (max-width:880px){ .two-col{grid-template-columns:1fr;} }
+
+  .progress-track{
+    height:16px;
+    background:var(--cream-dark);
+    border-radius:9px;
+    overflow:hidden;
+  }
+  .progress-fill{
+    height:100%;
+    background:linear-gradient(90deg,var(--brown-mid),var(--success));
+    border-radius:9px;
+    transition:width .3s;
+  }
+
+  .repartition-list{ display:flex; flex-direction:column; gap:16px; }
+  .repartition-row-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:6px;
+  }
+  .repartition-label{ font-weight:700; font-size:13.5px; color:var(--brown-dark); }
+  .repartition-stats{ font-size:12px; color:var(--muted); white-space:nowrap; }
+  .repartition-stats b{ color:var(--text); font-weight:700; }
+  .repartition-bar{ height:9px; background:var(--cream-dark); border-radius:6px; overflow:hidden; }
+  .repartition-bar-fill{
+    height:100%;
+    background:linear-gradient(90deg,var(--brown-mid),var(--accent));
+    border-radius:6px;
+    transition:width .35s ease;
+  }
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13.5px;
+  }
+  thead th{
+    text-align:left;
+    background:var(--brown-dark);
+    color:var(--white);
+    padding:11px 12px;
+    font-weight:600;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    position:sticky;
+    top:56px;
+  }
+  thead th:first-child{border-top-left-radius:8px;}
+  thead th:last-child{border-top-right-radius:8px;}
+  tbody td{
+    padding:9px 12px;
+    border-bottom:1px solid var(--cream-dark);
+    vertical-align:middle;
+  }
+  tbody tr:hover{background:var(--cream);}
+  tbody tr:nth-child(even){background:#FDFBF8;}
+  tbody tr:nth-child(even):hover{background:var(--cream);}
+
+  .history-table{ table-layout:fixed; }
+  .history-table th, .history-table td{ padding:12px 14px; }
+  .history-table td{ overflow-wrap:break-word; line-height:1.45; }
+  .history-table .col-right{ text-align:right; }
+  .history-table .col-center{ text-align:center; }
+  .history-table td.col-center .badge{ display:inline-block; }
+  .history-table input.col-right{ text-align:right; }
+  .history-table input.col-center{ text-align:center; }
+  .history-table .actions-cell{ justify-content:center; }
+
+  .badge{
+    display:inline-block;
+    padding:3px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+  }
+  .badge.payee{background:var(--success-bg);color:var(--success);}
+  .badge.nonpayee{background:var(--danger-bg);color:var(--danger);}
+
+  form .form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px 20px;
+  }
+  @media (max-width:700px){ form .form-grid{grid-template-columns:1fr;} }
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field label{font-size:13px;font-weight:600;color:var(--brown-dark);}
+  .field input, .field select{
+    padding:10px 12px;
+    border:1.5px solid var(--cream-dark);
+    border-radius:8px;
+    font-size:14px;
+    background:var(--cream);
+    color:var(--text);
+    font-family:inherit;
+  }
+  .field input:focus, .field select:focus{
+    outline:none;
+    border-color:var(--brown-mid);
+    background:var(--white);
+  }
+  .full-row{grid-column:1 / -1;}
+
+  .numero-input{
+    display:flex;
+    align-items:stretch;
+    border:1.5px solid var(--cream-dark);
+    border-radius:8px;
+    overflow:hidden;
+    background:var(--cream);
+    transition:.15s;
+  }
+  .numero-input:focus-within{ border-color:var(--brown-mid); background:var(--white); }
+  .numero-prefix{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 10px;
+    background:var(--brown-dark);
+    color:#fff;
+    font-weight:800;
+    font-size:12px;
+    letter-spacing:.2px;
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .numero-input input{
+    border:none;
+    background:transparent;
+    padding:10px 12px;
+    font-size:14px;
+    font-family:inherit;
+    color:var(--text);
+    flex:1;
+    min-width:60px;
+    letter-spacing:.5px;
+  }
+  .numero-input input:focus{ outline:none; }
+  .numero-input-sm{ border-radius:6px; border-color:var(--brown-mid); background:var(--white); }
+  .numero-input-sm .numero-prefix{ padding:0 7px; font-size:10.5px; }
+  .numero-input-sm input{ padding:6px 8px; font-size:13px; width:100%; min-width:50px; background:var(--white); }
+
+  .btn{
+    border:none;
+    border-radius:8px;
+    padding:11px 20px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.15s;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .btn-primary{background:linear-gradient(135deg,var(--brown),var(--brown-dark));color:var(--white);box-shadow:0 2px 8px rgba(22,27,31,0.22);}
+  .btn-primary:hover{background:linear-gradient(135deg,var(--brown-dark),#0D1114);box-shadow:0 4px 12px rgba(22,27,31,0.3);transform:translateY(-1px);}
+  .btn-outline{background:transparent;border:1.5px solid var(--brown);color:var(--brown-dark);}
+  .btn-outline:hover{background:var(--cream-dark);}
+  .btn-danger{background:var(--danger-bg);color:var(--danger);}
+  .btn-danger:hover{background:#f6d4cc;}
+  .btn-success{background:var(--success-bg);color:var(--success);}
+  .btn-success:hover{background:#d3ecd7;}
+  .btn-sm{padding:6px 12px;font-size:12.5px;border-radius:6px;}
+
+  .toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    align-items:end;
+    margin-bottom:18px;
+    background:var(--cream);
+    padding:16px;
+    border-radius:10px;
+  }
+  .toolbar .field{min-width:150px;}
+  .toolbar .grow{flex:1;}
+
+  .actions-cell{display:flex;gap:6px;flex-wrap:wrap;}
+
+  footer.app-footer{
+    text-align:center;
+    padding:22px;
+    font-size:12.5px;
+    color:var(--muted);
+    border-top:1px solid var(--cream-dark);
+    background:var(--white);
+  }
+  footer.app-footer b{color:var(--brown-dark);}
+
+  .empty-state{
+    text-align:center;
+    padding:40px 20px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  .table-wrap{overflow-x:auto;border-radius:10px;}
+
+  .toast{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    background:var(--brown-dark);
+    color:var(--white);
+    padding:13px 20px;
+    border-radius:10px;
+    box-shadow:var(--shadow-lg);
+    font-size:14px;
+    font-weight:600;
+    opacity:0;
+    transform:translateY(10px);
+    transition:.25s;
+    pointer-events:none;
+    z-index:100;
+  }
+  .toast.show{opacity:1;transform:none;}
+
+  .admin-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  @media (max-width:900px){ .admin-grid{grid-template-columns:1fr;} }
+
+  .hint{font-size:12.5px;color:var(--muted);margin-top:2px;}
+  .divider{height:1px;background:var(--cream-dark);margin:20px 0;}
+  .row-between{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+  .edit-input{
+    padding:6px 8px;
+    border:1.5px solid var(--brown-mid);
+    border-radius:6px;
+    font-size:13px;
+    width:100%;
+    background:var(--white);
+  }
+  .colActions{width:1%;white-space:nowrap;}
+  .company-note{
+    font-size:12.5px;
+    color:var(--muted);
+    background:var(--cream);
+    padding:10px 14px;
+    border-radius:8px;
+    margin-bottom:16px;
+    border-left:3px solid var(--brown-light);
+  }
+
+  /* ============ IMPRESSION ============ */
+  .print-only{display:none;}
+  .print-note{display:none;font-size:11px;color:#555;margin-top:8px;font-style:italic;}
+  @media print{ .print-note{display:block !important;} }
+  #printHeader{
+    align-items:center;
+    gap:16px;
+    padding-bottom:14px;
+    margin-bottom:16px;
+    border-bottom:2px solid var(--brown);
+  }
+  #printHeader .titles h1{margin:0;font-size:20px;color:var(--brown-dark);}
+  #printHeader .titles p{margin:2px 0 0;font-size:12px;color:var(--muted);}
+  @media print{
+    .print-only{display:flex !important;}
+    .nav-bar, .topbar-right, .company-switch, form, .toolbar,
+    .actions-cell, .colActions, footer.app-footer, .btn { display:none !important; }
+    body{background:#fff;}
+    header.topbar{box-shadow:none;border-bottom:none;padding:0;}
+    .brand{display:none;}
+    main{padding:0;max-width:100%;}
+    .panel-box, .card{box-shadow:none;border:1px solid #ddd;break-inside:avoid;}
+    thead th{position:static;background:var(--brown-dark) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .badge.payee{background:var(--success-bg) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .badge.nonpayee{background:var(--danger-bg) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    /* Date de verbalisation : laissée vierge pour renseignement manuscrit */
+    .dateverb-cell{position:relative;min-width:70px;}
+    .dateverb-cell .dv-value{visibility:hidden;}
+    .dateverb-cell::after{
+      content:"";
+      position:absolute;
+      left:8px;right:8px;bottom:9px;
+      border-bottom:1px solid #444;
+    }
+  }
+</style>
+<style>
+  /* ============ AJOUTS — CONNEXION / UTILISATEURS / MULTI-POSTE ============ */
+  html,body{height:100%;}
+  #loginScreen{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(160deg,var(--brown-dark),var(--brown));
+    padding:20px;
+  }
+  .login-card{
+    background:var(--white);
+    border-radius:16px;
+    box-shadow:var(--shadow-lg);
+    padding:36px 34px;
+    width:100%;
+    max-width:380px;
+  }
+  .login-card .brand{ justify-content:center; margin-bottom:6px; }
+  .login-card h1{ text-align:center; font-size:18px; color:var(--brown-dark); margin:6px 0 2px; }
+  .login-card p.hint{ text-align:center; margin:0 0 22px; }
+  .login-card .field{ margin-bottom:16px; }
+  .login-card .btn{ width:100%; justify-content:center; margin-top:6px; }
+  .login-error{
+    background:var(--danger-bg); color:var(--danger); border-radius:8px;
+    padding:10px 12px; font-size:13px; font-weight:600; margin-bottom:14px; display:none;
+  }
+  .login-error.show{ display:block; }
+  #appRoot{ display:none; }
+  #appRoot.ready{ display:block; }
+
+  .user-chip{
+    display:flex; align-items:center; gap:8px;
+    background:var(--cream-dark); border-radius:20px; padding:6px 8px 6px 14px; font-size:13px; font-weight:600; color:var(--brown-dark);
+  }
+  .user-chip .role-tag{
+    font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.4px;
+    background:var(--brown); color:#fff; padding:3px 8px; border-radius:12px;
+  }
+  .user-chip .role-tag.user{ background:var(--brown-light); }
+  .user-chip button{
+    border:none; background:transparent; color:var(--muted); cursor:pointer; padding:6px 8px;
+    border-radius:14px; font-size:12.5px; font-weight:700;
+  }
+  .user-chip button:hover{ background:var(--white); color:var(--brown-dark); }
+
+  .users-table-wrap{ margin-top:16px; }
+  .role-select{
+    padding:6px 8px; border:1.5px solid var(--cream-dark); border-radius:6px; font-size:12.5px; background:var(--white);
+  }
+  .admin-only-note{
+    font-size:12.5px; color:var(--muted); background:var(--cream); border-left:3px solid var(--gold);
+    padding:10px 14px; border-radius:8px; margin-bottom:16px;
+  }
+  .modal-backdrop{
+    position:fixed; inset:0; background:rgba(15,20,23,0.55); display:none;
+    align-items:center; justify-content:center; z-index:200; padding:20px;
+  }
+  .modal-backdrop.show{ display:flex; }
+  .modal-box{
+    background:var(--white); border-radius:14px; box-shadow:var(--shadow-lg);
+    padding:26px; width:100%; max-width:420px;
+  }
+  .modal-box h3{ margin:0 0 16px; color:var(--brown-dark); font-size:17px; }
+  .modal-box .field{ margin-bottom:14px; }
+  .modal-actions{ display:flex; gap:10px; justify-content:flex-end; margin-top:6px; }
+  .live-dot{
+    display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--success);
+    margin-right:6px; box-shadow:0 0 0 3px var(--success-bg);
+  }
+  @media print{ #loginScreen, .user-chip, .modal-backdrop { display:none !important; } }
+</style>
+</head>
+<body>
+
+<!-- ================= ECRAN DE CONNEXION ================= -->
+<div id="loginScreen">
+  <div class="login-card">
+    <div class="brand">
+      <span id="loginLogoSlot">
+        <svg viewBox="0 0 660 500" xmlns="http://www.w3.org/2000/svg" style="height:52px;width:auto;">
+          <polygon points="20,20 570,20 620,95 20,95" fill="#232B32"/>
+          <polygon points="150,95 250,95 250,432 188,480 150,455" fill="#232B32"/>
+          <rect x="300" y="110" width="90" height="330" fill="#232B32"/>
+          <rect x="300" y="110" width="290" height="150" rx="75" fill="#232B32"/>
+          <rect x="400" y="148" width="160" height="74" rx="37" fill="#FFFFFF"/>
+          <rect x="300" y="270" width="320" height="170" rx="85" fill="#232B32"/>
+          <rect x="400" y="310" width="190" height="90" rx="45" fill="#FFFFFF"/>
+        </svg>
+      </span>
+    </div>
+    <h1>Gestion des Amendes — Tropical Bois / KESHO</h1>
+    <p class="hint">Connectez-vous avec le compte fourni par votre administrateur.</p>
+    <div class="login-error" id="loginError"></div>
+    <form id="formLogin">
+      <div class="field">
+        <label for="l_username">Identifiant</label>
+        <input type="text" id="l_username" required autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="l_password">Mot de passe</label>
+        <input type="password" id="l_password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary" id="btnLogin">Se connecter</button>
+    </form>
+  </div>
+</div>
+
+<!-- ================= APPLICATION ================= -->
+<div id="appRoot">
+
+<header class="topbar">
+  <div class="brand">
+    <span id="brandLogoSlot">
+      <svg viewBox="0 0 660 500" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="20,20 570,20 620,95 20,95" fill="#232B32"/>
+        <polygon points="150,95 250,95 250,432 188,480 150,455" fill="#232B32"/>
+        <rect x="300" y="110" width="90" height="330" fill="#232B32"/>
+        <rect x="300" y="110" width="290" height="150" rx="75" fill="#232B32"/>
+        <rect x="400" y="148" width="160" height="74" rx="37" fill="#FFFFFF"/>
+        <rect x="300" y="270" width="320" height="170" rx="85" fill="#232B32"/>
+        <rect x="400" y="310" width="190" height="90" rx="45" fill="#FFFFFF"/>
+      </svg>
+    </span>
+    <div class="titles">
+      <h1 id="brandTitle">Tropical Bois · Gestion des Amendes</h1>
+      <p id="brandSubtitle">Suivi des infractions et amendes du parc automobile</p>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="company-switch" id="companySwitch">
+      <button data-company="tb" class="active">Tropical Bois</button>
+      <button data-company="kesho">KESHO</button>
+    </div>
+    <span class="date-badge" id="syncBadge" title="Données partagées en temps réel entre tous les postes connectés"><span class="live-dot"></span>Multi-postes</span>
+    <span class="date-badge" id="todayBadge"></span>
+    <div class="user-chip">
+      <span id="chipUsername">—</span>
+      <span class="role-tag" id="chipRole">—</span>
+      <button type="button" id="btnMyAccount" title="Changer mon mot de passe">Mon compte</button>
+      <button type="button" id="btnLogout" title="Se déconnecter">Déconnexion</button>
+    </div>
+  </div>
+</header>
+
+<div id="printHeader" class="print-only">
+  <div id="printLogoWrap"></div>
+  <div class="titles">
+    <h1 id="printTitle"></h1>
+    <p id="printMetaLine"></p>
+  </div>
+</div>
+
+<div class="nav-bar">
+  <div class="nav-dropdown" id="navDropdown">
+    <button class="nav-trigger" id="navTrigger" type="button">
+      <span class="nav-trigger-icon" id="navTriggerIcon"></span>
+      <span id="navTriggerLabel">Tableau de bord</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="nav-menu" id="navMenu"></div>
+  </div>
+</div>
+
+<main>
+
+  <!-- ================= DASHBOARD ================= -->
+  <section class="tab-panel active" id="tab-dashboard">
+    <div class="row-between">
+      <h2 class="section-title">Vue d'ensemble</h2>
+    </div>
+    <p class="company-note" id="dashCompanyNote"></p>
+
+    <div class="cards" id="dashCards"></div>
+
+    <div class="panel-box">
+      <div class="row-between" style="margin-bottom:10px;">
+        <h2 class="section-title" style="margin-bottom:0;">Taux de paiement</h2>
+        <span id="tauxPayeLabel" style="font-weight:700;color:var(--brown-dark);font-size:18px;"></span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%;"></div></div>
+      <div class="row-between" style="margin-top:10px;font-size:12.5px;color:var(--muted);">
+        <span>Payé : <b id="montantPayeSmall"></b></span>
+        <span>Impayé : <b id="montantImpayeSmall"></b></span>
+      </div>
+    </div>
+
+    <div class="panel-box">
+      <h2 class="section-title" style="margin-bottom:4px;">Répartition par type d'infraction</h2>
+      <p class="hint" style="margin:0 0 16px;">Part de chaque type d'infraction dans le montant total des amendes, du plus élevé au plus faible.</p>
+      <div class="repartition-list" id="repartitionBody"></div>
+    </div>
+  </section>
+
+  <!-- ================= ENREGISTREMENT ================= -->
+  <section class="tab-panel" id="tab-record">
+    <h2 class="section-title">Enregistrer une amende</h2>
+    <p class="company-note" id="recordCompanyNote"></p>
+    <div class="panel-box">
+      <form id="formInfraction">
+        <div class="form-grid">
+          <div class="field">
+            <label for="f_plaque">Véhicule (plaque d'immatriculation) *</label>
+            <select id="f_plaque" required></select>
+          </div>
+          <div class="field">
+            <label for="f_numero">Numéro de contravention *</label>
+            <div class="numero-input">
+              <span class="numero-prefix">C00000000000</span>
+              <input type="text" id="f_numero" placeholder="146042851" required inputmode="numeric" pattern="[0-9]{1,9}" maxlength="9" autocomplete="off">
+            </div>
+            <p class="hint">Le préfixe <b>C00000000000</b> est fixe et déjà pré-enregistré — saisissez uniquement la partie variable (9 chiffres maximum).</p>
+          </div>
+          <div class="field">
+            <label for="f_type">Type d'infraction *</label>
+            <select id="f_type" required></select>
+          </div>
+          <div class="field">
+            <label for="f_infraction_libre">Libellé (si "Autre")</label>
+            <input type="text" id="f_infraction_libre" placeholder="Précisez l'infraction">
+          </div>
+          <div class="field">
+            <label for="f_montant">Montant de l'amende (FCFA)</label>
+            <input type="number" id="f_montant" min="0" step="100">
+            <p class="hint">💡 Le statut est calculé automatiquement : un montant renseigné (&gt; 0) = amende <b>payée</b>. Laissez à 0 si l'amende n'est pas encore payée.</p>
+          </div>
+          <div class="field">
+            <label for="f_dateinf">Date de l'infraction *</label>
+            <input type="text" id="f_dateinf" placeholder="JJ/MM/AAAA" required inputmode="numeric" maxlength="10" autocomplete="off">
+            <p class="hint">Saisie manuscrite au format JJ/MM/AAAA (ex. 17/07/2026).</p>
+          </div>
+          <div class="field">
+            <label for="f_dateverb">Date de verbalisation</label>
+            <input type="date" id="f_dateverb" min="2025-01-01">
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row-between">
+          <p class="hint">* Champs obligatoires. Le véhicule doit d'abord être ajouté dans l'onglet Administrateur. La base de données démarre en 2025 : les dates antérieures ne sont pas acceptées.</p>
+          <button type="submit" class="btn btn-primary">Enregistrer l'amende</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= HISTORIQUE ================= -->
+  <section class="tab-panel" id="tab-history">
+    <div class="row-between">
+      <h2 class="section-title">Historique des infractions</h2>
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-outline btn-sm" id="btnPrintHistory">Imprimer</button>
+      </div>
+    </div>
+    <p class="company-note" id="historyCompanyNote"></p>
+
+    <div class="toolbar">
+      <div class="field">
+        <label>Véhicule</label>
+        <select id="h_plaque"><option value="">Tous</option></select>
+      </div>
+      <div class="field">
+        <label>Type d'infraction</label>
+        <select id="h_type"><option value="">Tous</option></select>
+      </div>
+      <div class="field">
+        <label>Statut</label>
+        <select id="h_statut">
+          <option value="">Tous</option>
+          <option value="Payée">Payée</option>
+          <option value="Non payée">Non payée</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Du</label>
+        <input type="date" id="h_from" min="2025-01-01">
+      </div>
+      <div class="field">
+        <label>Au</label>
+        <input type="date" id="h_to" min="2025-01-01">
+      </div>
+      <div class="field grow">
+        <label>Recherche (n° contravention)</label>
+        <input type="text" id="h_search" placeholder="Rechercher...">
+      </div>
+      <button class="btn btn-outline btn-sm" id="btnResetFilters">Réinitialiser</button>
+      <button class="btn btn-primary" id="btnExportExcel">Exporter vers Excel</button>
+    </div>
+
+    <div class="panel-box" style="padding:0;">
+      <div class="table-wrap">
+        <table class="history-table">
+          <colgroup>
+            <col style="width:9%">
+            <col style="width:15%">
+            <col style="width:25%">
+            <col style="width:9%">
+            <col style="width:11%">
+            <col style="width:11%">
+            <col style="width:9%">
+            <col style="width:11%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Plaque</th>
+              <th>N° contravention</th>
+              <th>Infraction</th>
+              <th class="col-right">Montant</th>
+              <th class="col-center">Date infraction</th>
+              <th class="col-center">Date verbalisation</th>
+              <th class="col-center">Statut</th>
+              <th class="col-center colActions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+        <div class="empty-state" id="historyEmpty" style="display:none;">Aucune amende ne correspond à ces critères.</div>
+      </div>
+    </div>
+    <p class="hint" id="historyCount"></p>
+    <p class="print-note">La colonne « Date de verbalisation » est laissée vierge pour être renseignée manuscritement.</p>
+  </section>
+
+  <!-- ================= ADMINISTRATEUR ================= -->
+  <section class="tab-panel" id="tab-admin">
+    <h2 class="section-title">Administration</h2>
+    <p class="company-note" id="adminCompanyNote"></p>
+
+    <div class="admin-grid">
+      <div class="panel-box">
+        <h2 class="section-title" style="margin-bottom:12px;">Ajouter un véhicule</h2>
+        <form id="formVehicule">
+          <div class="form-grid">
+            <div class="field full-row">
+              <label for="v_plaque">Plaque d'immatriculation *</label>
+              <input type="text" id="v_plaque" placeholder="Ex. 1248EA01" required>
+            </div>
+            <div class="field">
+              <label for="v_marque">Marque</label>
+              <input type="text" id="v_marque" placeholder="Ex. Toyota">
+            </div>
+            <div class="field">
+              <label for="v_modele">Modèle</label>
+              <input type="text" id="v_modele" placeholder="Ex. Hilux">
+            </div>
+            <div class="field">
+              <label for="v_conducteur">Conducteur habituel</label>
+              <input type="text" id="v_conducteur" placeholder="Nom du conducteur">
+            </div>
+            <div class="field">
+              <label for="v_statut">Statut</label>
+              <select id="v_statut">
+                <option value="Actif">Actif</option>
+                <option value="Inactif">Inactif</option>
+              </select>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <button type="submit" class="btn btn-primary">Ajouter le véhicule</button>
+        </form>
+      </div>
+
+      <div class="panel-box">
+        <h2 class="section-title" style="margin-bottom:12px;">Ajouter un type d'infraction</h2>
+        <form id="formCatalogue">
+          <div class="form-grid">
+            <div class="field">
+              <label for="c_code">Code</label>
+              <input type="text" id="c_code" placeholder="Ex. 050">
+            </div>
+            <div class="field">
+              <label for="c_montant">Montant par défaut (FCFA) *</label>
+              <input type="number" id="c_montant" min="0" step="100" required>
+            </div>
+            <div class="field full-row">
+              <label for="c_libelle">Libellé *</label>
+              <input type="text" id="c_libelle" placeholder="Ex. Stationnement interdit" required>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <button type="submit" class="btn btn-primary">Ajouter le type</button>
+        </form>
+        <div class="divider"></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Code</th><th>Libellé</th><th>Montant</th><th></th></tr></thead>
+            <tbody id="catalogueBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-box">
+      <div class="row-between">
+        <h2 class="section-title" style="margin-bottom:12px;">Véhicules enregistrés</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Plaque</th><th>Marque</th><th>Modèle</th><th>Conducteur</th><th>Statut</th><th>Nb. amendes</th><th class="colActions">Actions</th></tr>
+          </thead>
+          <tbody id="vehiculesBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel-box" id="usersPanel">
+      <div class="row-between" style="margin-bottom:6px;">
+        <h2 class="section-title" style="margin-bottom:0;">Gestion des utilisateurs</h2>
+      </div>
+      <p class="admin-only-note">Créez un compte par personne devant accéder au logiciel depuis son propre poste. Chaque utilisateur se connecte avec son identifiant et son mot de passe ; les données restent partagées et synchronisées entre tous les postes.</p>
+      <form id="formUser">
+        <div class="form-grid">
+          <div class="field">
+            <label for="u_username">Identifiant *</label>
+            <input type="text" id="u_username" placeholder="ex. jdupont" required autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="u_password">Mot de passe *</label>
+            <input type="text" id="u_password" placeholder="6 caractères minimum" required autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="u_role">Rôle</label>
+            <select id="u_role">
+              <option value="user">Utilisateur standard</option>
+              <option value="admin">Administrateur</option>
+            </select>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <button type="submit" class="btn btn-primary">Créer l'utilisateur</button>
+      </form>
+      <div class="table-wrap users-table-wrap">
+        <table>
+          <thead><tr><th>Identifiant</th><th>Rôle</th><th>Créé le</th><th class="colActions">Actions</th></tr></thead>
+          <tbody id="usersBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel-box">
+      <h2 class="section-title" style="margin-bottom:12px;">Sauvegarde des données</h2>
+      <p class="hint" style="margin-bottom:14px;">Ces actions concernent uniquement la société actuellement sélectionnée (<b id="backupCompanyName"></b>). Les données sont stockées sur le serveur central et partagées automatiquement entre tous les postes ; exportez tout de même une sauvegarde de temps en temps par précaution.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <button class="btn btn-outline" id="btnBackupExport">Exporter une sauvegarde (JSON)</button>
+        <label class="btn btn-outline" id="btnBackupImportLabel" style="cursor:pointer;">
+          Importer une sauvegarde
+          <input type="file" id="btnBackupImport" accept="application/json" style="display:none;">
+        </label>
+        <button class="btn btn-danger" id="btnResetAll">Réinitialiser les données de cette société</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  Logiciel de gestion des amendes &mdash; <b>Tropical Bois</b> &amp; <b>KESHO</b> &mdash; deux flottes de véhicules distinctes, usage interne
+</footer>
+
+</div><!-- /#appRoot -->
+
+<!-- ================= MODALE : MON COMPTE ================= -->
+<div class="modal-backdrop" id="modalAccount">
+  <div class="modal-box">
+    <h3>Mon compte</h3>
+    <form id="formChangePassword">
+      <div class="field">
+        <label for="cp_current">Mot de passe actuel</label>
+        <input type="password" id="cp_current" required autocomplete="current-password">
+      </div>
+      <div class="field">
+        <label for="cp_new">Nouveau mot de passe</label>
+        <input type="password" id="cp_new" required minlength="6" autocomplete="new-password">
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" id="btnCloseAccount">Annuler</button>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+<script src="tb-logo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
