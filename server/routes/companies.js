@@ -67,6 +67,14 @@ router.delete('/:company/infractions/:id', requireAdmin, wrap((req, res) => {
   if (!ok) return res.status(404).json({ error: 'Amende introuvable.' });
   res.json({ ok: true });
 }));
+/* Marquer une amende comme payee / non payee : action explicite et distincte
+   de la modification des details (montant, dates, etc.). */
+router.post('/:company/infractions/:id/statut', wrap((req, res) => {
+  const statut = (req.body || {}).statut === 'Payée' ? 'Payée' : 'Non payée';
+  const rec = db.markInfractionStatut(req.params.company, req.params.id, statut);
+  if (!rec) return res.status(404).json({ error: 'Amende introuvable.' });
+  res.json({ infraction: rec });
+}));
 
 /* ---------------------------- Catalogue ------------------------------ */
 router.get('/:company/catalogue', wrap((req, res) => res.json({ catalogue: db.listCatalogue(req.params.company) })));
